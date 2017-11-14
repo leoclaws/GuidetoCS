@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import model.existingCourses;
 import model.retrieveClassContent;
-import org.apache.catalina.ha.session.DeltaSession;
+
 public class CourseDisplayHttpServlet extends HttpServlet 
 {
     public void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException

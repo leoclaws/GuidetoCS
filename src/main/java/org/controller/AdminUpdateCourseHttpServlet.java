@@ -7,7 +7,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import model.updateCourseContent;
-import org.apache.catalina.tribes.util.Arrays;
+// import org.apache.catalina.tribes.util.Arrays;
+import java.util.Arrays;
 public class AdminUpdateCourseHttpServlet extends HttpServlet 
 {
     public void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException 

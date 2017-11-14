@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import model.updateMentor;
-import org.apache.catalina.tribes.util.Arrays;
+import java.util.Arrays;
 public class MentorUpdateHttpServlet extends HttpServlet 
 {
 
