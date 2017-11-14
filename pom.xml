@@ -68,7 +68,7 @@
                                 <groupId>com.github.jsimone</groupId>
                                 <artifactId>webapp-runner</artifactId>
                                 <version>8.5.23.0</version>
-                                <destFileName>webapp-runner.jar</destFileName>
+                                <destFileName>appweb-runner.jar</destFileName>
                             </artifactItem>
                         </artifactItems>
                     </configuration>
