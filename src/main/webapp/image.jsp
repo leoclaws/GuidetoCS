@@ -22,9 +22,8 @@
     {
       int len = imgLen.length();
       byte [] rb = new byte[len];
-      Blob obj = rs.getBlob(1);
-      InputStream readImg = obj.getBinaryStream(0,obj.length());
-      int index = readImg.read(rb, 0, len);
+      InputStream readImg = rs.getBinaryStream(1);
+      int index=readImg.read(rb, 0, len);  
       //st.close();
       response.reset();
      

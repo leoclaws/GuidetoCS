@@ -2,7 +2,7 @@ package model;
 
 import db.databaseLog;
 import db.updateAccountDatabase;
-import dto.userinfodto;
+import com.testid.mavenwebtest1.dto.userinfodto;
 import java.io.InputStream;
 import java.sql.Connection;
 import java.sql.PreparedStatement;

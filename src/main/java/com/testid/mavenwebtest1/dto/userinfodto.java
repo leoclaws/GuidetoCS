@@ -1,4 +1,4 @@
-package dto;
+package com.testid.mavenwebtest1.dto;
 
 import java.io.InputStream;
 

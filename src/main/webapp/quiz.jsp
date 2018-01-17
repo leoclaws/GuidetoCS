@@ -4,7 +4,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Quiz</title> 
+	<title>Quiz</title>
+        <script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
 	<style type="text/css">
 		.container{
 			width: 100%;
@@ -60,26 +61,21 @@
     <div class="container">
         <div class="inner">
             
+            <form action="OnNextPress" method="Post">
             <strong>Question </strong><%=(k+1)%><h3 id="q1"><%=list.get(k).Question()%></h3>
-            <input type="radio" name="rad" id="i1" value="A" onclick="alert1(this);"><label id="l1"><%=list.get(k).opt1()%></label><br>
-            <input type="radio" name="rad" id="i2" value="B" onclick="alert1(this);"><label id="l2"><%=list.get(k).opt2()%></label><br>
-            <input type="radio" name="rad" id="i3" value="C" onclick="alert1(this);"><label id="l3"><%=list.get(k).opt3()%></label><br>
-            <input type="radio" name="rad" id="i4" value="D" onclick="alert1(this);"><label id="l4"><%=list.get(k).opt4()%></label><br>
+            <input type="radio" name="rad" id="i1" value="A"><label id="l1"><%=list.get(k).opt1()%></label><br>
+            <input type="radio" name="rad" id="i2" value="B"><label id="l2"><%=list.get(k).opt2()%></label><br>
+            <input type="radio" name="rad" id="i3" value="C"><label id="l3"><%=list.get(k).opt3()%></label><br>
+            <input type="radio" name="rad" id="i4" value="D"><label id="l4"><%=list.get(k).opt4()%></label><br>
             
-            <input type ="reset" value="Clear" name="Clear">
-            
-            <form action="OnNextPress" method="Post" name="select">
-            <input type="submit" name="next" value="Next" id="next">
+                <input type="submit" name="next" value="Next" id="next">
             </form>
-            
             <form action="OnPrevPress" method="Post">
-            <input type="submit" name="prev" value="Prev" id="prev">
+                <input type="submit" name="prev" value="Prev" id="prev">
             </form>
-            
             <form action="Checker" method="Post">
             <input type="submit" value="Submit" id="submit"> 
             </form>
-            
         </div>
     <script type="text/javascript">
       
@@ -111,24 +107,31 @@
                  }
               
     </script>
-        <input type="hidden" name="hidden" id="getchoice">
-        <script type="text/javascript" >
-            function alert1(myradio) {
-                alert("Option selected " + myradio.value);
-                window.location.replace("quiz.jsp?radioValue=" + myradio.value);
-                //document.getElementById("getchoice").value = myradio.value;
+            
+        <script type="text/javascript">
+        $(document).ready(function(){
+        $("input[type='submit']").click(function(){
+        	var radioValue = $("input[name='rad']:checked").val();
+                if(radioValue)
+                {    
+                window.location.replace("quiz.jsp?radioValue=" + radioValue);
+                //window.location.href="quiz.jsp?radioValue=" + radioValue;
             }
-        </script>
+        });
         
+    });
+</script>
         <% String rad = request.getParameter("radioValue");
-        System.out.println("Value == "+rad);
         if(rad!=null)
         {
-            System.out.println("Value = " + rad);
+            //System.out.println("Value=" + rad);
             session.setAttribute("rad", rad);
             //session.setAttribute("ans", ans);
         }
-        %> 
+        %>
+        
+        
+        
     </div>
 </body>
 </html>

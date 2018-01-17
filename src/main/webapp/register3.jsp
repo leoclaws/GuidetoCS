@@ -70,7 +70,7 @@
   			</div>
 		</form>
 		<div style="color: white;  font-family: 'Josefin Sans', sans-serif; float:right;">
-			<a href="SLogin.html" style=" text-decoration: none; color:white;"><h4>Already Registered?</h4></a>
+			<a href="slogin.jsp" style=" text-decoration: none; color:white;"><h4>Already Registered?</h4></a>
 		</div>
 </body>
 <script type="text/javascript">

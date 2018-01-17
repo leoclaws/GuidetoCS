@@ -9,7 +9,7 @@
         <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
         <link rel="stylesheet" href="/resources/demos/style.css">
         <script src="//code.jquery.com/jquery-1.10.2.js"></script>
-        <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+<script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
 
 <link rel="stylesheet" 
   href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
@@ -411,7 +411,7 @@ function loadDoc() {
     var email=document.forms["myform"]["usermail"].value;
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
-    if (this.readyState === 4 && this.status === 200) {
+    if (this.readyState == 4 && this.status == 200) {
       alert("mail sent");
     }
   };

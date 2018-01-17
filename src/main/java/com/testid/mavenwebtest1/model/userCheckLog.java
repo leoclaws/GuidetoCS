@@ -2,7 +2,7 @@ package model;
 
 import db.databaseLog;
 import dto.userLogClass;
-import dto.userinfodto;
+import com.testid.mavenwebtest1.dto.userinfodto;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;

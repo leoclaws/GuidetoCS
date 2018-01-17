@@ -1,4 +1,4 @@
-package controller;
+package com.testid.mavenwebtest1.controller;
 
 import java.io.IOException;
 import java.sql.Connection;
